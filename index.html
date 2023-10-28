@@ -56,7 +56,11 @@
 
 
 <body :class="{ 'overflow-hidden max-h-screen': mobileMenu }" class="relative" x-data="{ mobileMenu: false }">
-  <embed name="GoodEnough" src="audio.mp3" loop="false" hidden="true" autostart="true">
+  <audio autoplay>
+    <source src="audio.mp3" type="audio/ogg">
+    <source src="audio.mp3" type="audio/mpeg">
+    <embed src="audio.mp3" width="180" height="90" loop="true" autostart="true" hidden="true" />
+  </audio>
 
   <div id="main" class="relative">
     <div x-data="{
